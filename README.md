@@ -27,15 +27,15 @@ _(The blue box represents the name translation rules)_
 
 **Relational Model:** <br>
 **Customers** (customer_number, customer_name, customer_email) <br> <br>
-**Orders** (order_number, order_date, order_total_price, customer_number, product_number)
-/* having product_number is more generic than having toothbrush_number */ <br> <br>
+**Orders** (order_number, order_date, order_total_price, customer_number, product_number) <br>
+_Having product_number is more generic than having toothbrush_number_ <br> <br>
 **Toothbrushes** (toothbrush_number, toothbrush_model, toothbrush_colour, toothbrush_price) <br> <br>
 **Materials** (material_number, material_name) <br> <br>
-**ToothbrushesMaterials** (toothbrush_number, material_number) /* following the many-to-many
-association */ <br> <br>
+**ToothbrushesMaterials** (toothbrush_number, material_number) _following the many-to-many
+association_  <br> <br>
 **Suppliers** (supplier_number, supplier_name, supplier_address) <br> <br>
 Orders[customer_number] ⊆ Customers[customer_number] <br> 
 ToothbrushesMaterials[toothbrush_number] ⊆ Toothbrushes[toothbrush_number] <br> 
 ToothbrushesMaterials[material_number] ⊆ Materials[material_number] <br> 
-/*As orders can contain products other than toothbrushes, we don’t need to constrain
-product_number */ 
+_As orders can contain products other than toothbrushes, we don’t need to constrain
+product_number_
